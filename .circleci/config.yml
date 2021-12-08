@@ -6,9 +6,6 @@ jobs:
     resource_class: small
     docker:
       - image: cimg/ruby:2.7.1
-        auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout:
           path: ~/choices
