@@ -103,14 +103,6 @@ Rails.configuration.mongodb.database    #=> "myapp_dev"
 ~~~
 
 ## Build Gem and push
-To build amagimedia-choices gem and push it to github package registry you can make use of:
-
-- `bash script/build_choices.sh` from project root directory if you have already added your github personal access token 
-(PAT) in `~/.gem/credentials` as follows: 
-```
----
-:github: Bearer <github PAT>
-```
-
-- `bash script/build_choices.sh <Github PAT>` from project root directory which will automatically create (or overwrite) `~/.gem/credentials` 
-and push the gem.
+To build amagimedia-choices gem and push it to github package registry you can make use of 
+`bash script/build_choices.sh` from project root directory.
+> Ensure `GITHUB_TOKEN` environment variable is set with Github Personal Access Token (PAT)
