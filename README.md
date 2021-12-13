@@ -101,3 +101,8 @@ Finally, the config keys can be read in your app as such:
 Rails.configuration.heroku              #=> false
 Rails.configuration.mongodb.database    #=> "myapp_dev"
 ~~~
+
+## Build Gem and push
+To build amagimedia-choices gem and push it to github package registry you can make use of 
+`bash script/build_choices.sh` from project root directory.
+> Ensure `GITHUB_TOKEN` environment variable is set with Github Personal Access Token (PAT)
