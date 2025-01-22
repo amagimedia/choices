@@ -14,6 +14,7 @@ describe Choices do
     @with_patch_without_local = path + '../settings/with_patch_without_local.yml'
     @with_patch_with_local = path + '../settings/patch.yml'
     @non_existent_file = path + '../settings/non_existent.yml'
+    @without_env = path + '../settings/without_env.yml'
   end
 
   describe 'when loading from Hash' do
@@ -51,6 +52,10 @@ describe Choices do
         Choices.load_settings(@with_local, 'nonexistent')
       }.must_raise(IndexError)
       error.message.must_equal %{Missing key for "nonexistent" in `#{@with_local}'}
+    end
+
+    it "should load with 'default' env" do
+      Choices.load_settings(@with_local, 'default').name.must_equal 'Defaults'
     end
   end
 
