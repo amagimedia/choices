@@ -12,6 +12,10 @@ module Choices
       mash.update local
     end
 
+    if env == "default"
+      return mash
+    end
+
     mash.fetch(env) do
       raise IndexError, %{Missing key for "#{env}" in `#{filename}'}
     end

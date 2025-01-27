@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name    = 'amagimedia-choices'
-  gem.version = '0.4.1'
+  gem.version = '0.5.0'
 
   gem.add_dependency 'hashie', '>= 0.4.0'
   gem.add_development_dependency 'minitest', '~> 5.0.6'
